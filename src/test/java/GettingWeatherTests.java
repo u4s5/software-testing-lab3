@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
-public class WeatherGettingTests {
+public class GettingWeatherTests {
 
     private final long DELAY = 500;
 
@@ -39,7 +39,7 @@ public class WeatherGettingTests {
         driver.findElement(By.xpath("//a[@class='nolink subnav_item'][1]")).click();
         Thread.sleep(DELAY);
 
-        assertEquals("", driver.getCurrentUrl());
+        assertEquals("https://www.gismeteo.ru/weather-moscow-4368/", driver.getCurrentUrl());
     }
 
     @Test
@@ -48,7 +48,7 @@ public class WeatherGettingTests {
         driver.findElement(By.xpath("//a[@class='nolink subnav_item'][2]")).click();
         Thread.sleep(DELAY);
 
-        assertEquals("", driver.getCurrentUrl());
+        assertEquals("https://www.gismeteo.ru/weather-moscow-4368/tomorrow/", driver.getCurrentUrl());
     }
 
     @After
