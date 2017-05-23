@@ -39,7 +39,7 @@ public class WeatherGettingTests {
         driver.findElement(By.xpath("//a[@class='nolink subnav_item'][1]")).click();
         Thread.sleep(DELAY);
 
-        assertEquals(driver.getCurrentUrl(), "");
+        assertEquals("", driver.getCurrentUrl());
     }
 
     @Test
@@ -48,7 +48,7 @@ public class WeatherGettingTests {
         driver.findElement(By.xpath("//a[@class='nolink subnav_item'][2]")).click();
         Thread.sleep(DELAY);
 
-        assertEquals(driver.getCurrentUrl(), "");
+        assertEquals("", driver.getCurrentUrl());
     }
 
     @After
