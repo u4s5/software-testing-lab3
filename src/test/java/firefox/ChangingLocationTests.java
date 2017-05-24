@@ -38,10 +38,10 @@ public class ChangingLocationTests {
     public void testChangingLocationToNear() throws Exception {
         setDefaultLocation(driver, DELAY);
 
-        driver.findElement(By.xpath("//div[@class='cities_list'][1]//a")).click();
+        driver.findElement(By.xpath("//div[@class='cities_list column_size_2'][1]//a")).click();
         Thread.sleep(DELAY);
 
-        assertEquals("https://www.gismeteo.ru/weather-bugry-162204/", driver.getCurrentUrl());
+        assertEquals("https://www.gismeteo.ru/weather-sankt-peterburg-pulkovo-12967/", driver.getCurrentUrl());
     }
 
     @Test
