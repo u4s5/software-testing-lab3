@@ -37,9 +37,6 @@ public class GettingWeatherTests {
     public void testGettingTodayWeather() throws Exception {
         setDefaultLocation(driver, DELAY);
 
-        driver.findElement(By.xpath("//a[@class='nolink subnav_item'][1]")).click();
-        Thread.sleep(DELAY);
-
         assertEquals("https://www.gismeteo.ru/weather-sankt-peterburg-4079/", driver.getCurrentUrl());
     }
 
@@ -47,7 +44,7 @@ public class GettingWeatherTests {
     public void testGettingTomorrowWeather() throws Exception {
         setDefaultLocation(driver, DELAY);
 
-        driver.findElement(By.xpath("//a[@class='nolink subnav_item'][2]")).click();
+        driver.findElement(By.xpath("//a[@class='nolink subnav_item'][1]")).click();
         Thread.sleep(DELAY);
 
         assertEquals("https://www.gismeteo.ru/weather-sankt-peterburg-4079/tomorrow/", driver.getCurrentUrl());
@@ -57,7 +54,7 @@ public class GettingWeatherTests {
     public void testGetting3DaysWeather() throws Exception {
         setDefaultLocation(driver, DELAY);
 
-        driver.findElement(By.xpath("//a[@class='nolink subnav_item'][3]")).click();
+        driver.findElement(By.xpath("//a[@class='nolink subnav_item'][2]")).click();
         Thread.sleep(DELAY);
 
         assertEquals("https://www.gismeteo.ru/weather-sankt-peterburg-4079/3-days/", driver.getCurrentUrl());
@@ -67,7 +64,7 @@ public class GettingWeatherTests {
     public void testGetting10DaysWeather() throws Exception {
         setDefaultLocation(driver, DELAY);
 
-        driver.findElement(By.xpath("//a[@class='nolink subnav_item'][4]")).click();
+        driver.findElement(By.xpath("//a[@class='nolink subnav_item'][3]")).click();
         Thread.sleep(DELAY);
 
         assertEquals("https://www.gismeteo.ru/weather-sankt-peterburg-4079/10-days/", driver.getCurrentUrl());
@@ -77,7 +74,7 @@ public class GettingWeatherTests {
     public void testGetting2WeeksWeather() throws Exception {
         setDefaultLocation(driver, DELAY);
 
-        driver.findElement(By.xpath("//a[@class='nolink subnav_item'][5]")).click();
+        driver.findElement(By.xpath("//a[@class='nolink subnav_item'][4]")).click();
         Thread.sleep(DELAY);
 
         assertEquals("https://www.gismeteo.ru/weather-sankt-peterburg-4079/2-weeks/", driver.getCurrentUrl());
@@ -87,7 +84,7 @@ public class GettingWeatherTests {
     public void testGettingMonthWeather() throws Exception {
         setDefaultLocation(driver, DELAY);
 
-        driver.findElement(By.xpath("//a[@class='nolink subnav_item'][6]")).click();
+        driver.findElement(By.xpath("//a[@class='nolink subnav_item'][5]")).click();
         Thread.sleep(DELAY);
 
         assertEquals("https://www.gismeteo.ru/weather-sankt-peterburg-4079/month/", driver.getCurrentUrl());
@@ -97,7 +94,7 @@ public class GettingWeatherTests {
     public void testGettingRadar() throws Exception {
         setDefaultLocation(driver, DELAY);
 
-        driver.findElement(By.xpath("//a[@class='nolink subnav_item'][7]")).click();
+        driver.findElement(By.xpath("//a[@class='nolink subnav_item'][6]")).click();
         Thread.sleep(DELAY);
 
         assertEquals("https://www.gismeteo.ru/nowcast-sankt-peterburg-4079/", driver.getCurrentUrl());
