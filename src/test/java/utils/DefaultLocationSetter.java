@@ -1,6 +1,7 @@
 package utils;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public class DefaultLocationSetter {
@@ -14,8 +15,10 @@ public class DefaultLocationSetter {
 
         driver.findElement(By.xpath("//input[@class='search_input'][1]")).sendKeys("Санкт-Петербург");
         Thread.sleep(DELAY);
+        driver.findElement(By.xpath("//input[@class='search_input'][1]")).sendKeys(Keys.RETURN);
+        Thread.sleep(DELAY);
 
-        driver.findElement(By.xpath("//a[@class='currentgeo_btn white nolink'][1]")).click();
+        driver.findElement(By.xpath("//section[@class='catalog_block'][2]//div[@class='catalog_item'][1]/a[@class='catalog_link link blue fontM'][1]")).click();
         Thread.sleep(DELAY);
     }
 
